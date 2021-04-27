@@ -2,13 +2,13 @@
 
 class Notebook:
     def __int__(self, marca, modelo, precio):
-    self.marca = marca
-    self.modelo = modelo
-    self.precio = precio
+        self.marca = marca
+        self.modelo = modelo
+        self.precio = precio
 
-def descuento (self, numero):
-    descuento = (numero/100)* self.precio
-    return(self.precio - descuento)
+    def descuento (self, numero):
+        descuento = (numero/100)* self.precio
+        return(self.precio - descuento)
 
 mac = Notebook("apple", "air", 1000)
 print(mac.descuento(34))
