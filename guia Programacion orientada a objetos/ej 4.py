@@ -4,7 +4,31 @@
 •	reset()
 •	valorActual()
 •	valorNuevo(nuevoValor)
-Como ejemplo el resultado de ejecutar las siguientes líneas tiene que ser 12 y 25.
+Como ejemplo el resultado de ejecutar las siguientes líneas tiene que ser 12 y 25."""
+
+class Contador:
+    def __init__(self, valor):
+        self.valor = valor
+        self.valor_inicial = valor      
+        
+    def inc(self):
+        self.valor += 1
+
+    def dis(self):
+        self.valor -= 1
+    
+    def reset(self):
+        self.valor == 0
+        
+    def valorNuevo(self, nuevoValor):
+        self.valor = nuevoValor
+        
+    def valorActual(self):
+        print(self.valor)
+    
+    def volverValorInicial(self):
+        self.valor = self.valor_inicial
+
 contador = Contador(10)
 contador.inc()
 contador.inc()
@@ -14,19 +38,11 @@ contador.valorActual()
 contador.valorNuevo(27)
 contador.dis()
 contador.dis()
-contador.valorActual()"""
+contador.valorActual()
+contador.volverValorInicial()
+contador.valorActual()
 
-class Contador:
-    def __init__ (self,valor):
-        self.valor = valor
-    def inc(self):
-        self.valor += 1
-    def dis(self):
-        self.valor -= 1
-    def restet(self):
-        self.valor == 0
-    def valorNuevo(self, nuevoValor):
-        self.valor =nuevoValor
-    def valorActual(self):
-        print(self.valor)
-
+#como guardar el valor inicial?
+#sel.valor_inicial= valor
+#def volverValorInicial(self):
+        #self.valor = self.valor_inicial
