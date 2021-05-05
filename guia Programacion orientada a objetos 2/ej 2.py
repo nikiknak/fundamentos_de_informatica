@@ -24,3 +24,4 @@ class Golondrina:
     
     pepito = Golondrina(200)
     pepito.esta_equilibrio()
+    
