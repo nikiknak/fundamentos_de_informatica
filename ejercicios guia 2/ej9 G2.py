@@ -24,7 +24,7 @@ while nom != "*":
 edad_max = max(lista_edades)
 for i in range(len(lista_edades)):
     if lista_edades[i] == edad_max:
-        print(lista_nombres[i])
-        print (edad_max)
+        print("la edad maxima la tiene:",lista_nombres[i],"tiene:", edad_max, "años")
+       
 
 

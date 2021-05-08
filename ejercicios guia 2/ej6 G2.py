@@ -11,6 +11,6 @@ lista=[a1,a2,a3,a4,a5]
 #for item in lista [::-1]:
     #print(item)
 #otra forma: 
-lista2=list(lista)
-lista2.reverse()
+lista2=list(lista) --> #manera de copiar una lista en otra
+lista2.reverse() --> # hace la lista al reves
 print(lista2)
