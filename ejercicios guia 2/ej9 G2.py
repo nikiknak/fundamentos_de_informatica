@@ -25,5 +25,6 @@ edad_max = max(lista_edades)
 for i in range(len(lista_edades)):
     if lista_edades[i] == edad_max:
         print(lista_nombres[i])
+        print (edad_max)
 
 
