@@ -4,7 +4,7 @@ f= open("/Users/niki/Desktop/INFORMATICA/UCEMA_Fundamentos_de_informatica-master
 mensaje =f.readlines()
 contador = 0
 print(mensaje)
-for i in lineas:
+for i in mensaje:
     if re.search("^[^M]", i) is not None:
         contador += 1
 print(contador)

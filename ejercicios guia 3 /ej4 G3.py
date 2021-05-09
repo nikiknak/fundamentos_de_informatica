@@ -2,4 +2,5 @@
 import re
 string = "Buen_dia"
 patron = "(\w*)_(\w*)"
+print(re.findall(patron, string))
 print(re.search(patron, string))

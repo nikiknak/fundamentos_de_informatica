@@ -6,12 +6,11 @@ nuevo = open('nuevo_archivo.txt', 'w')
 
 #copiamos la info del viejo en el nuevo
 with open("/Users/niki/Desktop/INFORMATICA/UCEMA_Fundamentos_de_informatica-master/Python_intro/manipulacion_archivos.txt") as f:
-    with open("/Users/niki/Desktop/INFORMATICA/nuevo_archivo.txt", "w") as f1:
+    with open("/Users/niki/Desktop/fundamentos_de_informatica/fundamentos_de_informatica/nuevo_archivo.txt", "w") as f1:
         for line in f:
             f1.write(line)
-
 #modificamos la info
-nuevo = open("/Users/niki/Desktop/INFORMATICA/nuevo_archivo.txt", "r+")
+nuevo = open("/Users/niki/Desktop/fundamentos_de_informatica/fundamentos_de_informatica/nuevo_archivo.txt", "r+")
 
 
 nuevotext = nuevo.read()
@@ -19,5 +18,5 @@ nuevotext = nuevo.read()
 nuevotext = nuevotext.replace('p', 'p\n')
 
 
-with open('/Users/niki/Desktop/INFORMATICA/nuevo_archivo.txt', 'w') as file:
+with open('/Users/niki/Desktop/fundamentos_de_informatica/fundamentos_de_informatica/nuevo_archivo.txt', 'w') as file:
   file.write(nuevotext)
