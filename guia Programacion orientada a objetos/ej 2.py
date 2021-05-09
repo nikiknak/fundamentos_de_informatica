@@ -1,4 +1,5 @@
-#2: Modificá el método volar de la clase Golondrina visto en la clase de teoría de manera que no pueda volar si al hacerlo la energía toma el valor 0 o valor negativo.
+#2: Modificá el método volar de la clase Golondrina visto en la clase de teoría de manera que no pueda
+#  volar si al hacerlo la energía toma el valor 0 o valor negativo.
 class Golondrina:
   def __init__(self, energia):
     self.energia = energia
