@@ -11,3 +11,4 @@ for caracter in cadena:
             contadores [caracter] =1
 for campo,valor in contadores.items():
     print (campo,valor)
+    
