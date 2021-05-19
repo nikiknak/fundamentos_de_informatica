@@ -12,7 +12,7 @@ class Calculadora:
         self.numero = numero
     
     def cargar(self, numero1):
-        self.numero += numero1
+        self.numero + sel numero1
     
     def sumar(self, numero2):
         self.numero += numero2

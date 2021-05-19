@@ -12,3 +12,37 @@ pueden cargar_combustible en la cantidad que digamos y al hacerlo suben su canti
 saben responder si entran una cantidad de personas. Esto sucede cuando esa cantidad es menor o igual al máximo que pueden llevar.
 
 Definí las clases Moto, Auto y MedioDeTransporte y hace que las dos primeras hereden de la tercera."""
+
+class MediodeTransporte:
+    def __init__(self,combustible = 100):
+        self.combustible = combustible
+        def cargar_combustible (self, cantidad):
+            self.cargar_combustible = self.combustible + cantidad
+        def combustible_actual(self):
+            self.cargar_combustible = self.combustible_actual
+        def cantidad_personas( self, personas):
+            self.cantidad_personas = personas <= self.max_personas
+            
+class Auto(MediodeTransporte):
+        def max_personas(self):
+            self.max_personas = 5
+            return self.max_personas
+        def distancia (self, km):
+            self.distancia = self.combustible - (1/2 * km)
+        
+class Moto(MediodeTransporte):
+        def max_personas(self):
+            self.max_personas = 2
+            return self.max_personas
+        def distancia (self,km):
+            self.distancia = self.combustible - (1 * km)
+
+        
+moto1 = Moto(200)
+moto2 = Moto()
+auto1 = Auto(300)
+auto2 = Auto()
+
+print(moto1.cantidad_personas(3))
+print(moto1.cantidad_personas(2))
+
