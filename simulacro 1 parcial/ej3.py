@@ -22,7 +22,7 @@ print(pony37.json()) #pony 37
 #{'status': 200, 'data': [{'id': 37, 'name': 'Limestone Pie', 'url': 'https://mlp.fandom.com/wiki/Limestone_Pie_and_Marble_Pie', 'sex': 'Female', 'residence': 'Pie Family 
 #Rock Farm, Rockville, Western Equestria', 'kind': ['Earth'], 'image': ['https://vignette.wikia.nocookie.net/mlp/images/a/a2/Limestone_Pie_ID_S5E20.png/revision/latest?cb=20151024190324', 'https://vignette.wikia.nocookie.net/mlp/images/9/96/Limestone_Pie_id_S1E23.png/revision/latest?cb=20110825215431']}]}
 
-song = requests.get("https://ponyweb.ml/v1/character/song")
+song = requests.get("https://ponyweb.ml/v1/character/song/all")
 print(song.json())
 
 path = "/Users/niki/Desktop/INFORMATICA/archivo_nuevos.txt"
