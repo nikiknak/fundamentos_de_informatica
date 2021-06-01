@@ -1,0 +1,44 @@
+Pandas.read_csv --> lee un archivo de tipo tabla separado en tabla
+
+sep: indica como separar los eleementos. por defecto es la coma ","
+
+header: toma la primera fila como encabezado de la tabla ( si no se le pasa una lista de encabezados)
+Se puede seleccionar cualquier fila como encabezado. Si no tiene encabezado y no se queire usar ninguna de los datos se utiliza None.
+
+dtype: Indica el tipo de datos del data frame. Por defecto detecta el tipo de datos por columna.
+
+skiprows: ignora un numero de filas. Por defecto es 0.
+
+nrows: cantidad de lineas que se leen del archivo. Sirve cuando el archivo es muy grande.
+
+df.head: muestra un numero dado de la parte inicial del data frame. Por defecto su valor es 5.
+
+df.tail: de igual manera, muestra un numero dado del final del data frame. por defecto su valor e 5.
+
+df.max(): nos dice el valor maximo por columna.
+df.min(): idem al anterior pero con el valor minimo por columna.
+
+df.count(): devuelve la cantidad de datos no nulos de cada columna.
+
+concat: (une dos datos de pandas)
+Por defecto este metodo usa el eje de las columnas para unir los datos (axis = 0) y une los data frames de manera que quede uno bajo del otro y,
+a su vez uniendo las columnas ( se agregan las nuevas):
+
+result = pd.concat([df1, df2])
+print(result)
+
+Podemos cambiar el eje y usar las filas para que se unan los data frames:
+result = pd.concat([df1, df2, axis = 1])
+print(result)
+
+interseccion: datos q tienen en comun dos conjuntos
+en lugar de la union, podemos querer la interseccion de los data frames 
+(solo lo que tengan en comun), para lo cual podemos modificar el metodo 
+
+
+
+apartir de un data frame podemos obtener un diccionario con to_dic() --> pero no pueden converirse en listas
+
+
+
+

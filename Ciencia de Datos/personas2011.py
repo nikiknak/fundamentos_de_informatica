@@ -36,3 +36,4 @@ print(df[df['edad'] > 35 ]) # me deuvelve los datos de todas las personas con ma
 #Contá cuántas personas de 30 años ingresaron al ministerio en 2011 
 #¿Cuántas formas de hacer este cálculo se te ocurren?
 print(df[df["edad"]== 30]) # cantidad de personas 2098
+
