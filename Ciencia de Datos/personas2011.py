@@ -37,3 +37,7 @@ print(df[df['edad'] > 35 ]) # me deuvelve los datos de todas las personas con ma
 #¿Cuántas formas de hacer este cálculo se te ocurren?
 print(df[df["edad"]== 30]) # cantidad de personas 2098
 
+#base de datos relacionales y no relacionales
+
+
+print(df['maximo_grado_academico_id'].value_counts())
