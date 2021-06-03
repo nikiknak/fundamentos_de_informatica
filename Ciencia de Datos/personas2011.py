@@ -24,7 +24,7 @@ print(df.groupby("seniority_level").count()) #cuantos tipos de seniority_level h
 # en este caso esta el A, B, C, D y S/D
 #pero para obtener informacion mas exacta: seniority_level y contá cuántas personas tenían expertice nivel B, C y D
 #hago:
-print(df.groupby("seniority_level")[["persona_id"]].count()) #solo me duevuelve los datos de perdon_id teniendo en cuanta seniority_level
+print(df.groupby("seniority_level")[["persona_id"]].count()) #solo me duevuelve los datos de personn_id teniendo en cuanta seniority_level
 # B = 6674, C = 13645 y D = 5774
 print(df['edad'] * 2) #me devuelve en numero entero ( se multiplica la edad por 2)
 print(df['edad'] + 2) # me devuelve en numero entero ( se le suma a la edad 2)
