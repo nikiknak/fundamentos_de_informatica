@@ -212,3 +212,16 @@ Si la serie no tiene índices, las claves del diccionario se completan
 automáticamente.
 >>> print(s1.to_dict())
 {0: 'X0', 1: 'X1', 2: 'X2', 3: 'X3'}
+
+
+MERGE:
+pd.merge():
+
+how: indica la manera de unión de los data frames, por defecto es “inner” (intersección).
+
+on: indica en base a qué columna se van a unir los data frames. Esta columna tiene que estar presente en ambos data frames.
+
+left_on: nombre de la columna de los datos de la izquierda el cual se va a usar para unir los data frames.
+
+right_on: igual al anterior, pero con una columna de los datos de la derecha. Ambos tienen que explicitarse.
+
