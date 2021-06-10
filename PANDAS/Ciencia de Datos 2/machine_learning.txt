@@ -1,0 +1,30 @@
+Machine learning:
+en base a la experiencia la maquina aprende 
+atraves de un input de datos entrenar a la maquina para que entienda y asocie patrones.
+
+desventajas:
+muestran un muestreo de la realidad, no es la realidad
+recorte de la verdad
+
+automatizado: 
+mas facil
+mas rapido
+
+Clustering:
+ver si mis set de datos comparten caracteristicas entre si
+no sabemos a que grupo pertenece este set de datos
+despues el analisis es mas sensillo
+reducir el caudal de datos con el que estoy trabajando
+sirve principalemente de forma exploratoria ( busar caracteristicas generales de nuestro set de datos)
+
+
+Los métodos de clustering (agrupamientos) nos permiten buscar patrones "ocultos" en
+los datos sin la necesidad de contar con la
+información sobre la verdadera clasificación (etiquetas) de los datos
+
+clasificacion: metodos supervisado
+
+
+patrones ( buscarlos): distintas formas de separar los datos 
+que datos comparten mismas characteristicas, variables
+separar en grupos
