@@ -1,0 +1,19 @@
+distribuciones:
+no hay una unica distribucion dependen del tipo de datos.
+se pueden caluclar 3 cosas utiles:
+1. Moda (valor q mas se repite dentro de una distribucion,en el grafico es el munto mas alto.)
+2. Mediana (es el valor/punto donde los datos se distribuyen en 50 de un lado y 50 del otro) las mitades no son iguales en su forma sino  que son iguales en cantidades de datos 
+3. Media ( promedio de los valores )
+
+**Cuantiles**
+-cuartiles ( 25%, 50% (Mediana), 75%)
+- quintiles ( divide la distribucion en 5)
+- deciles (divide la distribucion en 10)
+- percentiles ( dividen la distribucion en 100)
+
+distribucion normal: ( forma de la curva es simetrica)
+la media, la mediana y la moda valen lo mismo 
+
+
+
+
