@@ -1,6 +1,6 @@
 import pandas  as  pd 
-personas = pd.read_csv("/Users/niki/Desktop/fundamentos_de_informatica/fundamentos_de_informatica/bases de datos/personas_2011 (1).csv",sep = ";")
-conicet = pd.read_csv("/Users/niki/Desktop/fundamentos_de_informatica/fundamentos_de_informatica/bases de datos/ref_categoria_conicet (1).csv",";")
+personas = pd.read_csv("/Users/niki/Desktop/fundamentos_de_informatica/fundamentos_de_informatica/PANDAS/bases de datos/personas_2011 (1).csv",sep = ";")
+conicet = pd.read_csv("/Users/niki/Desktop/fundamentos_de_informatica/fundamentos_de_informatica/PANDAS/bases de datos/ref_categoria_conicet (1).csv",";")
 
 pers = personas [['persona_id','anio', 'categoria_conicet_id']]
 # merge hace un tercer data frame 
@@ -69,7 +69,7 @@ print(df.set_index(['anio', 'mes']))
 #na_position: por defecto es "last", por lo que todos los valores NaN se ordenan al final, pero se puede configurar como "first" para que aparezcan primero.
 
 df = pd.DataFrame({
-    'col1': ['A', 'A', 'B', np.nan, 'D', 'C'],
+    'col1': ['A', 'A', 'B', "np.nan", 'D', 'C'],
     'col2': [2, 1, 9, 8, 7, 4],
     'col3': [0, 1, 9, 4, 2, 3],
     'col4': ['a', 'B', 'c', 'D', 'e', 'F']})
@@ -105,3 +105,67 @@ print(df.sort_values(by='col1', ascending=False, na_position='first'))
 # en base a ese generar una tabla con el id de la persona y la descripción de la categoría en conicet. 
 # Luego guardar este último DataFrame en un archivo.
 
+print(personas["edad"])
+#0        36
+#1        48
+#2        30
+#3        51
+#4        39
+#         ..
+#68547    -1
+#68548    55
+#68549    18
+#68550    -1
+#68551    27
+#Name: edad, Length: 68552, dtype: int64
+
+mayores = personas.sort_values (by ="edad",ascending= False). head(10)
+print(mayores["edad"])
+
+#5182     88
+#47199    85
+#14292    84
+#7555     84
+#34738    84
+#12158    83
+#21866    83
+#11977    83
+#11852    83
+#45303    83
+#Name: edad, dtype: int64
+
+producciones_ult_4_anios = personas.sort_values(by ="producciones_ult_anio",ascending=False ).tail(4)
+print(producciones_ult_4_anios)
+#       persona_id  anio  sexo_id  ...  institucion_cargo_docente_id  clase_cargo_docente_id  tipo_condicion_docente_id
+#25220       33566  2011        2  ...                           NaN                     NaN                        NaN
+#59211       93131  2011        2  ...                           NaN                     NaN                        NaN
+#59210       93129  2011        1  ...                           NaN                     NaN                        NaN
+#68551      185608  2011        1  ...                           NaN                     NaN                        NaN
+mayores1 = mayores [["persona_id", "anio", "edad", "producciones_ult_4_anios", "categoria_conicet_id"]]
+print(mayores1)
+#       persona_id  anio  edad  producciones_ult_4_anios  categoria_conicet_id
+#5182         6522  2011    88                         8                   5.0
+#47199       63317  2011    85                         0                  -1.0
+#14292       18569  2011    84                        11                  -1.0
+#7555         9442  2011    84                        19                  -1.0
+#34738       44842  2011    84                        28                  -1.0
+#12158       15685  2011    83                        12                  -1.0
+#21866       29049  2011    83                         1                  -1.0
+#11977       15407  2011    83                         9                  -1.0
+#11852       15238  2011    83                        22                  -1.0
+#45303       59467  2011    83                        13                  -1.0
+union = pd.merge(mayores1, conicet, on = "categoria_conicet_id")
+print(union)
+#   persona_id  anio  edad  producciones_ult_4_anios  categoria_conicet_id categoria_conicet_descripcion
+#0        6522  2011    88                         8                   5.0         Investigador superior
+#1       63317  2011    85                         0                  -1.0        No pertenece a Conicet
+#2       18569  2011    84                        11                  -1.0        No pertenece a Conicet
+#3        9442  2011    84                        19                  -1.0        No pertenece a Conicet
+#4       44842  2011    84                        28                  -1.0        No pertenece a Conicet
+#5       15685  2011    83                        12                  -1.0        No pertenece a Conicet
+#6       29049  2011    83                         1                  -1.0        No pertenece a Conicet
+#7       15407  2011    83                         9                  -1.0        No pertenece a Conicet
+#8       15238  2011    83                        22                  -1.0        No pertenece a Conicet
+#9       59467  2011    83                        13                  -1.0        No pertenece a Conicet
+
+union.to_csv("union.csv", sep=",") # esta guardado en la carpeta Pandas 
