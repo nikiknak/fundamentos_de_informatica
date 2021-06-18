@@ -1,0 +1,31 @@
+Desafío I: Estamos construyendo una aplicación Web para un biblioteca, en la cuál podrá:
+
+1. consultar y cargar o borrar información sobre libros
+2. consultar y cargar o borrar revistas y audio libros disponibles 
+Escribí las posibles rutas indicando sus métodos HTTP correspondientes.
+
+priemro: protocologo 
+segundo: dominio 
+tercero: recursos 
+3 ULRS bases de mi aplicacion: 
+no se le puede poner delete porque no se puede borrar todos los recursos
+libros: https://labiblio.com/libros --> GET, POST
+audiolibros: https://labiblio.com/audiolibros --> GET, POST
+revistas: https://labiblio.com/revistas --> GET, POST
+
+si se puede eliminar un recurso
+libros: https://labiblio.com/libros/1 --> GET, DELETE, PUT 
+audiolibros: https://labiblio.com/audiolibros/1 --> GET, DELETE, PUT
+revistas: https://labiblio.com/revistas/1 --> GET, DELETE , PUT
+
+Desafío II: Estamos construyendo una aplicación para un e-comerce de venta de 
+productos cosméticos naturales. La aplicación debe permitir:
+
+Buscar los productos por número
+Editar la información de los productos
+Eliminar la información de los productos
+Escribí las posibles rutas indicando sus métodos HTTP correspondientes.
+
+URL: https://productoscosmeticos.com
+roductos: https://productoscosmeticos.com/productos --> GET, POST
+Productos: https://productoscosmeticos.com/productos/1 --> GET, DELETE, PUT
