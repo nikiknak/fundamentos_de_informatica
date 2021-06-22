@@ -14,6 +14,12 @@ se pueden caluclar 3 cosas utiles:
 distribucion normal: ( forma de la curva es simetrica)
 la media, la mediana y la moda valen lo mismo 
 
+diferencia entre distribuciones: 
 
+p-values es la probabilidad de que un valor estadictivo calculado sea posible dada una hipotesis nula cierta.
+hipotesis nula cierta --> distribucion normal.
 
+p-value --> si me da menos 0,05 yo descarto esta hipotesis, es demasiado baja. rechazo o acepto la hipotesis nula con una confianza del 99%.
+
+la probabilidad mas alta es la media/moda/media (distr normal)
 
