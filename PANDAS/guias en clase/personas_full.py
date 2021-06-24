@@ -24,6 +24,7 @@ sexo = pd.read_csv('/Users/niki/Desktop/fundamentos_de_informatica/fundamentos_d
 #personas_cat = pd.merge(personas11, sexo, on = 'sexo_id')
 
 #print(personas_cat)
+#personas_cat.to_csv('personas_full.csv', index=False, header=True)
 
 
 # lo hice en un excel directamente y lo llame personas_full
@@ -83,7 +84,7 @@ print(personas_full.drop(['grado_academico_id'], axis=1, inplace=True))
 # Distorsiona la verdadera distribución de la variable Distorsiona la correlación entre variables dado que añade valores constantes
 print(personas_full.mode())
 print(personas_full.median())
-
+print(personas_full.quantile([0.25,0.5,0.75]))
 #AJUSTE DE TIPOS DE DATOS DE LAS COLUMNAS Y DUPLICADOS:
 
 #En algunos casos las bases de datos suelen tener algunas inconsistencias de tipos de datos, por ejemplo columnas que deberían ser numéricas y se cargan como (strings) 
@@ -101,6 +102,7 @@ print(personas_full.median())
 #Así mismo es frecuente encontrar celdas duplicadas en los datos, que facilmente pueden ser removidos mediante:
 #df.drop_duplicates(inplace=True)
 
-#Desafío III: Revisá el DataFrame para detectar otras anomalías en los datos y averiguá como resolverlas.
+#Desafío IV: Revisá el DataFrame para detectar otras anomalías en los datos y averiguá como resolverlas.
 
 print (personas_full.drop_duplicates(inplace=True))
+print(personas_full)
