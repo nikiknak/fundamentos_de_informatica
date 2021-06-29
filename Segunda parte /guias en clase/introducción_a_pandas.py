@@ -1,4 +1,10 @@
 import pandas as pd
+
+una_serie = pd.Series(['Peru', 'Argentina', 'Bolivia', 'Uruguay', 'Brasil', 'Chile'], dtype='string')
+print(una_serie)
+paises_latam = pd.DataFrame(data ={"Pais": ['Peru', 'Argentina', 'Bolivia', 'Uruguay', 'Brasil', 'Chile'], "Lengua oficial primaria": ['Español', 'Español', 'Español', 'Español', 'Portugues', 'Español']}, index = [1,2,3,4,5,6])
+print(paises_latam)
+
 df = pd.read_csv("/Users/niki/Downloads/personas_2011 (2).csv",sep = ";")
 ##sep: delimitador a usar, indica como separar los elementos.
 #Pero en este caso usamos punto y coma porque los datos estan separados por comas ya.
@@ -56,3 +62,33 @@ print(df[df["edad"]== 30]) # cantidad de personas 2098
 #base de datos relacionales y no relacionales
 
 print(df['maximo_grado_academico_id'].value_counts())
+
+#Desafío VI: Descargala en formato csv y cargala en un nuevo DataFrame de nombre
+categoria= pd.read_csv("/Users/niki/Desktop/INFORMATICA/ref_categoria_conicet (1).csv",";")
+print(categoria)
+
+#Desafío VII: Identificá si existen columnas en común con el DataFrame grande
+
+df3 = pd.merge( df, categoria, on='categoria_conicet_id')
+print(df3)
+#Para pensar 🤔: ¿Qué datos tiene df3? ¿Qué hace el método concat() 
+# y qué diferencia tiene con hacer merge()?
+df3 = pd.concat([df, categoria,])
+
+# concat: (une dos datos de pandas)
+#merge nos permite realizar "joins" entre tablas. El join es realizado sobre las columnas o sobre las filas.
+
+#3. Métodos de los DataFrames
+
+# Lectura/carga de datos:        Limpieza de los datos:	 Estdistica de los datos:
+# pd.read_csv()                  pd.head()               pd.describe()
+# pd.read_table()                pd.fillna()	         df.sample()
+# pd.read_excel()                pd.dropna()             pd.mean()
+# pd.read_sql()                  pd.sort_values()        pd.median()
+# pd.read_json()                 pd.groupby()            pd.std()
+# pd.to_csv()                    pd.apply()              pd.min()
+# pd.DataFrame()                 pd.append()             pd.max()
+# pd.concat()                    pd.rename()             pd.count()
+# pd.Series()                    pd.set_index()          pd.corr()
+# pd.DataFrame.from_dict()       pd.tail()               pd.hist()
+
